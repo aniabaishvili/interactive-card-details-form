@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import backgroundImage from '../public/images/bg-main-mobile.png'
+import BackgroundDesktop from '../public/images/bg-main-desktop.png'
 
 const Global = createGlobalStyle`
       *{
@@ -12,9 +13,13 @@ const Global = createGlobalStyle`
         min-height: 100vh;
         background-image: url(${backgroundImage});
         background-repeat:no-repeat;
-        background-size: 360px;
+        background-size: contain;
         
-        
+        @media screen and (min-width:768px){
+            background-image: url(${BackgroundDesktop});
+            background-size: contain;
+
+        }
     }
 `
 
