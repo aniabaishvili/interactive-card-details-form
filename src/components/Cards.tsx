@@ -7,30 +7,34 @@ export function Cards() {
   return (
     <CardContainer>
       <BackgroundImage>
-        <FrontCard>
-          <img src={FrontCardImage} />
-        </FrontCard>
         <BackCard>
           {" "}
           <img src={BackCardImage} />
         </BackCard>
+        <FrontCard>
+          <img src={FrontCardImage} />
+        </FrontCard>
       </BackgroundImage>
     </CardContainer>
   );
 }
 
 const CardContainer = styled.div`
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
- 
+  margin-top: 10px; */
+
 `;
 const BackgroundImage = styled.div`
-  display: flex;
-  flex-direction: column-reverse;
   position: relative;
- 
+
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const FrontCard = styled.div`
@@ -42,14 +46,28 @@ const FrontCard = styled.div`
   top: 64%;
   z-index: 1;
   right: 10%;
+
+  @media screen and (min-width: 768px) {
+    img {
+      width: 447px;
+      height: 245px;
+    }
+
+    position: relative;
+  }
 `;
 const BackCard = styled.div`
   & img {
     width: 286px;
     height: 157px;
   }
-  
- 
+
+  @media screen and (min-width: 768px) {
+    img {
+      width: 447px;
+      height: 245px;
+    }
+  }
 `;
 
 export default Cards;
