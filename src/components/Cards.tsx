@@ -62,11 +62,14 @@ const BackCard = styled.div`
     height: 157px;
   }
 
+
   @media screen and (min-width: 768px) {
     img {
       width: 447px;
       height: 245px;
+      margin-left:30px;
     }
+    padding-top:20px;
   }
 `;
 
