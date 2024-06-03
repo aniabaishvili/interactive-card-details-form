@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import backgroundImage from '../public/images/bg-main-mobile.png'
 import BackgroundDesktop from '../public/images/bg-main-desktop.png'
 
+
 const Global = createGlobalStyle`
       *{
      margin: 0;
@@ -14,6 +15,7 @@ const Global = createGlobalStyle`
         background-image: url(${backgroundImage});
         background-repeat:no-repeat;
         background-size: contain;
+        font-family: 'Space Grotesk';
         
         @media screen and (min-width:768px){
             background-image: url(${BackgroundDesktop});
