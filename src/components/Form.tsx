@@ -51,6 +51,10 @@ const MonthInput = styled.input`
 
 const Container = styled.div`
   transform: translateY(50%);
+
+  @media screen and (min-width: 768px) {
+    transform: none;
+  }
 `;
 const NamesInput = styled.div`
   display: flex;

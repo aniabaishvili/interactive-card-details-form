@@ -25,6 +25,7 @@ const MainContainer = styled.div`
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
+    column-gap: 60px;
   }
 `;
 

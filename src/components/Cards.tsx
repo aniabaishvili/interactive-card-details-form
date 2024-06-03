@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import FrontCardImage from "../../public/images/bg-card-front.png";
 import BackCardImage from "../../public/images/bg-card-back.png";
+import circle from '../../public/images/card-logo.svg'
 
 export function Cards() {
   return (
@@ -13,11 +14,14 @@ export function Cards() {
         </BackCard>
         <FrontCard>
           <img src={FrontCardImage} />
+          <img src={circle} className="circle"/>
         </FrontCard>
       </BackgroundImage>
     </CardContainer>
   );
 }
+
+
 
 const CardContainer = styled.div`
   /* display: flex;
@@ -41,6 +45,18 @@ const FrontCard = styled.div`
   & img {
     width: 286px;
     height: 157px;
+  }
+
+  & .circle{
+    width:50px;
+    height:50px;
+   transform: translateY(-150px);
+   margin-left:10px;
+   @media screen and (min-width:768px){
+   transform: translate(-410px, -150px);
+   width:70px;
+   height:70px;
+   }
   }
   position: absolute;
   top: 64%;
