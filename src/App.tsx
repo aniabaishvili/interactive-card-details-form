@@ -1,29 +1,31 @@
-import styled from 'styled-components';
-import { Global } from  './Global';
-import './App.css'
-import Cards from './components/Cards';
+import styled from "styled-components";
+import { Global } from "./Global";
+import "./App.css";
+import Cards from "./components/Cards";
+import Form from "./components/Form";
 
 function App() {
-
-
   return (
     <>
-    <MainContainer>
-     <Global/>
-     <Cards/>
-     </MainContainer>
-     
+      <MainContainer>
+        <Global />
+        <Cards />
+        <Form />
+      </MainContainer>
     </>
-  )
+  );
 }
 
 const MainContainer = styled.div`
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   min-height:100vh;
-  
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 
-export default App
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
+export default App;
